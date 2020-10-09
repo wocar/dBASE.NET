@@ -1,33 +1,34 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <ProjectGuid>{6D931BBD-E331-4A20-90E8-FF7BB2A46E8F}</ProjectGuid>
     <AssemblyTitle>dBASE.NET</AssemblyTitle>
     <Company>Independent Software / Alexander van Oostenrijk</Company>
     <Product>dBASE.NET</Product>
     <Description>dBASE.NET is a .NET class library used to load dBASE IV .dbf files. The Dbf class reads fields (DbfField) and records (DbfRecord) from a .dbf file. These fields and records can then be accessed as lists and looped over.</Description>
     <Copyright>Copyright 2019</Copyright>
-    <Version>1.2.2</Version>
-    <AssemblyVersion>1.2.0.0</AssemblyVersion>
-    <FileVersion>1.2.0.0</FileVersion>
-    <DocumentationFile>bin\$(Configuration)\dBASE.NET.xml</DocumentationFile>
-    <OutputPath>bin\$(Configuration)\</OutputPath>
     <Authors>Independent Software / Alexander van Oostenrijk</Authors>
     <LangVersion>default</LangVersion>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
+  
   <PropertyGroup>
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
-  <PropertyGroup>
-    <AssemblyOriginatorKeyFile>dBASE.NET.key.snk</AssemblyOriginatorKeyFile>
-  </PropertyGroup>
+
   <ItemGroup>
     <None Include=".gitignore" />
+    <None Update="fixtures\**\*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\dBASE.NET\dBASE.NET.csproj" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.7.1" />
+    <PackageReference Include="MSTest.TestAdapter" Version="2.1.2" />
     <PackageReference Include="MSTest.TestFramework" Version="2.1.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties" />
   </ItemGroup>
 </Project>
