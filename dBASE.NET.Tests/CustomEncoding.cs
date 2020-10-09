@@ -49,6 +49,7 @@
                 { "KODI", "02" },
             };
 
+            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
             encoding = Encoding.GetEncoding(866);
         }
 
