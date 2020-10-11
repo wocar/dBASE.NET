@@ -56,7 +56,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download Artifact
-        uses: actions/download-artifact@v1v
+        uses: actions/download-artifact@v1
         with:
           name: nupkg
       - name: Push to GitHub Feed
