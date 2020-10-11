@@ -1,4 +1,4 @@
-﻿# dBASE.NET - Read and write DBF files with .NET
+﻿﻿# dBASE.NET - Read and write DBF files with .NET
 
 __dBASE.NET__ is a .NET class library used to read FoxBase, dBASE III and dBASE IV .dbf files. Data read
 from a file is returned as a list of typed fields and a list of records. This library is useful to add
